@@ -1,8 +1,8 @@
 import requests, json, time
 
 status = "Example status"
-token = "Account authencation token here"
-
+token = "Account auth token here"
+delay = 3 #in seconds, the higher this number is the lower the chances of you getting rate limmited/banned is.
 class main:
     def __init__(self, token, status):
         self.token = token
@@ -15,13 +15,13 @@ class main:
                 self.set_status(string)
                 i += 1
                 if len(string) > len(self.status)-1:
-                    time.sleep(1)
+                    time.sleep(delay)
                     i = 0
                     string = self.status[0:i+1]
                     print(string) 
                     self.set_status(string)
                     i += 1             
-                time.sleep(1)
+                time.sleep(delay)
         
         except KeyboardInterrupt:
             print("Stopped auto status!")
