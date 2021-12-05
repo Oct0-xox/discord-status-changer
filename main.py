@@ -30,7 +30,7 @@ class main:
         requests.patch("https://discord.com/api/v9/users/@me/settings", headers={"authorization": self.token,"content-type": "application/json"}, data=json.dumps({"custom_status":{"text":status,"emoji_name":"👉"}}))
 
 if __name__ == "__main__":
-    if requests.patch("https://discord.com/api/v9/users/@me/settings", headers={"authorization": token,"content-type": "application/json"}).status_code == 400:
+    if requests.patch("https://discord.com/api/v9/users/@me", headers={"authorization": token,"content-type": "application/json"}).status_code == 400:
         main(token, status)
     else:
         print("Failed to connect to token")
