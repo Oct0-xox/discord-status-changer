@@ -1,7 +1,7 @@
 import requests, json, time
 
 status = "Example status"
-token = "Account auth token here"
+token = "NzA3NjAxNTEyNjI4NDg2MTY0.GwZGKo.V9PV3Hh4R4eHbJ_joY-yHvOXusAMI4ryoRQ7Wk"
 delay = 3 #in seconds, the higher this number is the lower the chances of you getting rate limmited/banned is.
 class main:
     def __init__(self, token, status):
